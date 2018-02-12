@@ -26,7 +26,7 @@ This creates the file "target/kafka-custom-principal-builder-1.0-SNAPSHOT.jar" w
     export CLASSPATH=/some/path/*
 
 ### Kafka properties
-    principal.builder.class=de.thmshmm.kafka.CustomPrincipalBuilder
+    principal.builder.class=de.thmshmm.kafka.CommonNamePrincipalBuilder
     ssl.client.auth=required
 
 ## Test

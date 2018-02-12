@@ -5,13 +5,13 @@ import java.security.Principal;
 /**
  * Created by Thomas Hamm on 21.07.17.
  */
-public class CustomPrincipal implements Principal {
+public class CommonNamePrincipal implements Principal {
     private static final String SEPARATOR = ":";
 
     private String principalType;
     private String name;
 
-    public CustomPrincipal(String principalType, String name) {
+    public CommonNamePrincipal(String principalType, String name) {
         this.principalType = principalType;
         this.name = name;
     }
@@ -19,9 +19,9 @@ public class CustomPrincipal implements Principal {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CustomPrincipal)) return false;
+        if (!(o instanceof CommonNamePrincipal)) return false;
 
-        CustomPrincipal that = (CustomPrincipal) o;
+        CommonNamePrincipal that = (CommonNamePrincipal) o;
 
         if (!principalType.equals(that.principalType)) return false;
 
